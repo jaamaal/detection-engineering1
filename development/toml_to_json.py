@@ -3,7 +3,7 @@ import os
 import tomllib
 
 url = "https://ebc566c641254c04a477b1cb23ba9781.us-central1.gcp.cloud.es.io:9243/api/detection_engine/rules"
-api_key = os.environ['ELASTIC_KEY']
+api_key = os.environ['ELASTIC_KEY']  #Elastic_Key already define in Github, so no need to put the actual API key of Elastic Siem
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
     'kbn-xsrf': 'true',
