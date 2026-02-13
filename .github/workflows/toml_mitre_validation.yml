@@ -3,8 +3,8 @@ name: TOML/MITRE Validation
 on:
   push:
        path:
-        - 'detections/**.toml'
-        - '!**.yml'
+        - '**.toml'
+
   workflow_dispatch:
 
 
