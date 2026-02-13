@@ -9,11 +9,12 @@ on:
 
 
 jobs:
-   toml-validation:
+  elastic-detections-all:
     runs-on: ubuntu-latest
+    env:
+      ELASTIC_KEY: ${{ secrets.ELASTIC_KEY }} 
 
-
-    steps:
+    steps: 
     - uses: actions/checkout@v4
     - name: Set up Python 3.14.3
       uses: actions/setup-python@v4
