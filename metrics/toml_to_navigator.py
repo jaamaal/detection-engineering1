@@ -3,7 +3,7 @@ import os
 
 techniques = {}
 
-for root, dirs, files in os.walk("detections/"):
+for root, dirs, files in os.walk("D:\Training\Detection-Engg\Training\Python\detection-engineering1\detections"):
     for file in files:
         if file.endswith(".toml"):
             full_path = os.path.join(root, file)
@@ -32,9 +32,9 @@ for root, dirs, files in os.walk("detections/"):
 beginning = """{
 	"name": "Custom Detections",
 	"versions": {
-		"attack": "13",
-		"navigator": "4.8.2",
-		"layer": "4.4"
+		"attack": "18",
+		"navigator": "5.3.0",
+		"layer": "4.5"
 	},
 	"domain": "enterprise-attack",
 	"description": "",
@@ -91,7 +91,7 @@ total_techniques = 0
 for technique in techniques:
     total_techniques += 1
 
-output_path = "metrics/navigator.json"
+output_path = "D:/Training/Detection-Engg/Training/Python/detection-engineering1/metrics/navigator.json"
 
 outF = open(output_path, "w")
 outF.write(beginning)

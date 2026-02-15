@@ -1,5 +1,5 @@
 {
-	"name": "Custom Detections",
+	"name": "layer",
 	"versions": {
 		"attack": "18",
 		"navigator": "5.3.0",
@@ -9,17 +9,17 @@
 	"description": "",
 	"filters": {
 		"platforms": [
+			"Windows",
 			"Linux",
 			"macOS",
-			"Windows",
-			"Network",
+			"Network Devices",
+			"ESXi",
 			"PRE",
 			"Containers",
-			"Office 365",
-			"SaaS",
-			"Google Workspace",
 			"IaaS",
-			"Azure AD"
+			"Office Suite",
+			"SaaS",
+			"Identity Provider"
 		]
 	},
 	"sorting": 0,
@@ -29,87 +29,11 @@
 		"showID": false,
 		"showName": true,
 		"showAggregateScores": false,
-		"countUnscored": false
+		"countUnscored": false,
+		"expandedSubtechniques": "none"
 	},
 	"hideDisabled": false,
-    "techniques": [
-		{
-			"techniqueID": "T1059",
-			"tactic": "execution",
-			"score": 4,
-			"color": "",
-			"comment": "",
-			"enabled": true,
-			"metadata": [],
-			"links": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1059.003",
-			"tactic": "execution",
-			"score": 1,
-			"color": "",
-			"comment": "",
-			"enabled": true,
-			"metadata": [],
-			"links": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1074",
-			"tactic": "collection",
-			"score": 1,
-			"color": "",
-			"comment": "",
-			"enabled": true,
-			"metadata": [],
-			"links": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1074.001",
-			"tactic": "collection",
-			"score": 1,
-			"color": "",
-			"comment": "",
-			"enabled": true,
-			"metadata": [],
-			"links": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1020",
-			"tactic": "exfiltration",
-			"score": 1,
-			"color": "",
-			"comment": "",
-			"enabled": true,
-			"metadata": [],
-			"links": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1046",
-			"tactic": "discovery",
-			"score": 2,
-			"color": "",
-			"comment": "",
-			"enabled": true,
-			"metadata": [],
-			"links": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1059.001",
-			"tactic": "execution",
-			"score": 3,
-			"color": "",
-			"comment": "",
-			"enabled": true,
-			"metadata": [],
-			"links": [],
-			"showSubtechniques": false
-		},
+	"techniques": [
 		{
 			"techniqueID": "T1547",
 			"tactic": "persistence",
@@ -122,8 +46,8 @@
 			"showSubtechniques": false
 		},
 		{
-			"techniqueID": "T1547.001",
-			"tactic": "persistence",
+			"techniqueID": "T1547",
+			"tactic": "privilege-escalation",
 			"score": 1,
 			"color": "",
 			"comment": "",
@@ -133,9 +57,9 @@
 			"showSubtechniques": false
 		},
 		{
-			"techniqueID": "T1082",
-			"tactic": "discovery",
-			"score": 1,
+			"techniqueID": "T1555",
+			"tactic": "credential-access",
+			"score": 3,
 			"color": "",
 			"comment": "",
 			"enabled": true,
@@ -146,7 +70,40 @@
 		{
 			"techniqueID": "T1217",
 			"tactic": "discovery",
-			"score": 1,
+			"score": 4,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1534",
+			"tactic": "lateral-movement",
+			"score": 5,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1197",
+			"tactic": "defense-evasion",
+			"score": 2,
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1197",
+			"tactic": "persistence",
+			"score": 2,
 			"color": "",
 			"comment": "",
 			"enabled": true,
@@ -154,7 +111,7 @@
 			"links": [],
 			"showSubtechniques": false
 		}
-    ],
+	],
 	"gradient": {
 		"colors": [
 			"#ff6666ff",
@@ -162,7 +119,7 @@
 			"#8ec843ff"
 		],
 		"minValue": 0,
-		"maxValue": 3
+		"maxValue": 10
 	},
 	"legendItems": [],
 	"metadata": [],
@@ -170,5 +127,6 @@
 	"showTacticRowBackground": false,
 	"tacticRowBackground": "#dddddd",
 	"selectTechniquesAcrossTactics": true,
-	"selectSubtechniquesWithParent": false
+	"selectSubtechniquesWithParent": false,
+	"selectVisibleTechniques": false
 }
