@@ -1,6 +1,7 @@
 # Detection Lab
 
 [![GitHub Repo](https://img.shields.io/badge/github-jaamaal/detection--lab-blue)](https://github.com/jaamaal/detection-lab)
+
 A hands-on repository for implementing **Detection as Code**. This repo demonstrates building, testing, and deploying security detections using a CI/CD pipeline, making detection engineering repeatable, reliable, and automated.
 
 ## Features
